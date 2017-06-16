@@ -1,0 +1,457 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+@font-face {
+  font-family: bradhitc;
+  src: url(../fonts/BRADHITC.TTF);
+}
+
+body {
+  padding-bottom: 40px;
+  background-color: rgba(42, 25, 3, 0.61);
+  width: 100%;
+}
+
+.title{
+  font-family: bradhitc;
+  font-weight: bold;
+  font-size: 28px;
+  text-align: center;
+  color: white;
+  border: 3px solid rgba(222, 203, 172, 0.67);
+  border-radius: 15px;
+  padding: 10px;
+  width: 18%;
+  margin-left: 8%;
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+/*.navbar-inverse{
+  width: 100%;
+  background-color: inherit;
+}*/
+.nav-title{
+  width: 90%;
+  background-color: rgba(42, 25, 3, 0.91);
+  box-shadow: 3px 3px 5px rgb(32, 32, 34);
+  border-radius: 3px;
+  margin-left: 5%;
+  padding-bottom: 60px;
+}
+
+.navbar-wrapper {
+  /*background-color: rgba(227, 207, 137, 0.85);*/
+  margin-left: 20%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.container{
+  width: 70%;
+
+  padding: 0;
+  /*border-radius: 30px;*/
+}
+
+.navbar-inverse{
+  margin-top: 20px;
+  background-color: inherit;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+  border-radius: 30px;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+
+#navbar > ul > li{
+  padding-left: 30px;
+}
+
+#navbar > ul > li > a{
+  font-family: bradhitc;
+  font-weight: bold;
+  font-size: 30px;
+  color: white !important;
+}
+
+.dropdown-menu{
+
+  background-color: rgb(233, 236, 215);
+  margin-left: 13%;
+}
+
+.dropdown-menu > li > a{
+  font-family: bradhitc;
+  font-weight: bold;
+  font-size: 23px;
+  color: rgb(23, 37, 8);
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 850px;
+  width: 80%;
+  display: block;
+  margin: 60px auto 60px auto;
+  padding: 0 150px 0 150px;
+  background-color: rgba(32, 16, 11, 0.64) !important;
+  box-shadow: 3px 3px 5px rgb(32, 32, 34);
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 850px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 850px;
+}
+
+/*-------------------------------------*/
+.paragraph{
+  width: 60%;
+  color: rgba(211, 220, 221, 0.74);
+  font-family: bradhitc;
+  font-weight: bold;
+  font-size: 23px;
+  word-spacing: 0.35em;
+  letter-spacing: 0.1em;
+  margin: 30px auto 0 auto;
+}
+
+
+.show{
+  margin: 30px auto 0 auto;
+}
+
+.skill_info{
+  width: 50%;
+  margin-left: 25%;
+}
+.skill_row{
+  width: 80%;
+  margin: auto;
+}
+
+.thumbnail{
+  width: 60%;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgb(32, 32, 34);
+  background-color: rgba(158, 205, 208, 0.79) !important;
+}
+
+.caption > h3{
+  font-family: bradhitc;
+  font-weight: bold;
+  text-align: center;
+}
+
+.notice{
+  margin: 30px 0 0 10%;
+  color: rgb(91, 21, 9);
+}
+/* ------------EXP Table------------- */
+.table-title{
+  width: 30%;
+  text-align: center;
+  font-family: bradhitc;
+  font-weight: bold;
+  display: block;
+  margin: auto;
+  color: black;
+  margin-top: 50px;
+}
+
+.glyphicon{
+  margin-right: 3%;
+}
+
+.exp-table{
+  /*margin-left: 18%;
+  margin-bottom: 50px;*/
+}
+
+.exp-table > img{
+  width: 50%;
+  margin: 30px auto 30px auto;
+  display: block;
+}
+
+.table1{
+  margin-top: 50px;
+}
+
+
+.curve > h1{
+  font-family: bradhitc;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.curve > img{
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 50px;
+  background-color: rgba(237, 214, 154, 0.5);
+  border-radius: 20px;
+}
+
+/*------------Monsters------------*/
+.monsters{
+  font-family: bradhitc;
+  color: black;
+  font-weight: bold;
+}
+
+.monsters-title{
+  font-size: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.monsters table{
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 0.15rem;
+  width: 70%;
+  color: black;
+  background-color: rgba(215, 228, 221, 0.5);
+  margin: 0 auto 50px auto;
+}
+
+.monster-name{
+  font-size: 45px;
+}
+
+/*--------------Quests--------------*/
+.job{
+  font-family: bradhitc;
+  color: black;
+}
+.job-title{
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: 30px;
+  text-align: center;
+
+}
+
+.skill{
+  font-weight: bold;
+  margin-left: 25%;
+}
+/*==============table============*/
+.table{
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 0.15rem;
+  width: 60%;
+  background-color: rgba(13, 23, 17, 0.82);
+  color: white;
+  margin: 0 auto 50px auto;
+}
+th{
+  text-align: center;
+  width: 35%;
+}
+
+/*----------------Skills----------------*/
+.job{
+  font-family: bradhitc;
+  color: black;
+}
+.job-title{
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: 50px;
+  text-align: center;
+
+}
+
+.skill{
+  font-weight: bold;
+  margin-left: 25%;
+}
+
+/*-------------About the game-----------*/
+.ATGTitle{
+  font-family: bradhitc;
+  color: black;
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+footer{
+  position: relative;
+	top: 50px;
+
+}
+
+.footer-basic-centered{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+	font: bold 18px Arial;
+  letter-spacing: 0.1em;
+
+	padding: 45px;
+	margin-top: 80px;
+}
+
+.footer-basic-centered .footer-company-motto{
+	color:  white;
+	font-size: 20px;
+	margin: 0;
+}
+
+.footer-basic-centered .footer-company-name{
+	color:  white;
+	font-size: 16px;
+	margin: 0;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+
+}
+
+@media (min-width: 200px) {
+  .title{
+    font-size: 18px;
+  }
+  #navbar > ul > li{
+    background-color: rgb(199, 168, 98);
+  }
+  #navbar > ul > li > a{
+    font-size: 16px;
+  }
+  .carousel{
+    height: 300px;
+  }
+  .carousel .item{
+    height: 300px;
+  }
+  .carousel-inner > .item > img{
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .title{
+    font-size: 20px;
+  }
+  .container{
+    background-color: rgba(227, 207, 137, 0.35);
+  }
+  #navbar > ul > li{
+    background-color: transparent;
+  }
+  #navbar > ul > li{
+    padding-left: 5px;
+  }
+
+  #navbar > ul > li > a{
+    font-size: 20px;
+  }
+  .carousel{
+    height: 400px;
+  }
+  .carousel .item{
+    height: 400px;
+  }
+  .carousel-inner > .item > img{
+    height: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title{
+    font-size: 28px;
+  }
+  #navbar > ul > li{
+    padding-left: 15px;
+  }
+
+  #navbar > ul > li > a{
+    font-size: 25px;
+  }
+  .carousel{
+    height: 650px;
+  }
+  .carousel .item{
+    height: 650px;
+  }
+  .carousel-inner > .item > img{
+    height: 650px;
+  }
+}
+
+@media (min-width: 1366px){
+  .carousel{
+    width: 60%;
+  }
+}

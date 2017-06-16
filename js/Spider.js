@@ -1,0 +1,96 @@
+var Spider = function(map,player){
+    Monster.call(this, 120, 23, 7, player, map);//Call the parent's constructor(hp,atk,exp,player)
+    this.load = function(){
+      this.url = define.imagePathMonster + "spider.png";
+      this.pic = new Framework.AnimationSprite({url:this.url, col:6, row:4, loop: true, speed: 6});
+      this.pic.scale = 1;
+      this.walkDir = {x:0, y:0};
+      this.counter = 0;
+      this.name = 'spider';
+      this.map = map;
+    }
+
+    this.draw = function(ctx){
+      var picPos = this.pic.position;
+      var screenPos = this.map.screenPosition;
+      var playerPos = this.player.playerPic.position;
+
+      ctx.fillStyle = 'rgb(9, 4, 23)';
+      ctx.fillRect(picPos.x-screenPos.x-30, picPos.y-screenPos.y-30, 60*(this.currentHP/this.hp), 10);
+      if(this.isTouchingPlayer){
+        this.printDamageReceived(ctx);
+      }
+    }
+
+    this.update = function(){
+      if(this.counter > 90){
+        var randomDir = Math.floor(Math.random() * 4);
+        this.counter = 0;
+      }
+      this.counter++;
+      this.move(randomDir);
+      this.checkMonsterDead();
+      this.revive();
+      this.pic.update();
+
+      if(this.player.currentHP > 0 && this.player.isAttacked === false){
+        this.touchPlayer();
+      }
+
+      if(this.player.resistCounter === 0){
+        this.player.isAttacked = false;
+        this.isTouchingPlayer = false;
+        this.player.resistCounter = this.player.resistTime;
+      }
+    }
+
+    this.setPosition = function(pos){
+      this.pic.position = {
+        x: pos.x * 32 + 16,
+        y: pos.y * 32 + 16
+      };
+    }
+}
+
+Spider.prototype = Object.create(Monster.prototype);
+Spider.prototype.constructor = Monster;
+
+Spider.prototype.move = function(randomDir){
+  switch (randomDir) {
+    case 0://up
+      this.walkDir = {x: 0, y: -1};
+      this.pic.start({from:18, to:23, loop:true});
+      break;
+    case 1://left
+      this.walkDir = {x: -1, y: 0};
+      this.pic.start({from:6, to:11, loop:true});
+      break;
+    case 2://down
+      this.walkDir = {x: 0, y: 1};
+      this.pic.start({from:0, to:5, loop:true});
+      break;
+    case 3://right
+      this.walkDir = {x: 1, y: 0};
+      this.pic.start({from:12, to:17, loop:true});
+      break;
+  }
+  if(this.map.canMove(this.pic.position.x + this.walkDir.x, this.pic.position.y + this.walkDir.y, randomDir)){
+      this.pic.position.x += this.walkDir.x;
+      this.pic.position.y += this.walkDir.y;
+  }
+};
+
+Spider.prototype.touchPlayer = function(){
+    var picPos = this.pic.position;
+    var playerPos = this.player.playerPic.position;
+    if(Math.abs(picPos.x - playerPos.x) < 33 && Math.abs(picPos.y - playerPos.y) < 33 && !this.isDead){
+        if(this.player.currentHP <= this.currentAtk){
+            this.player.currentHP = 0;
+        }
+        else{
+            this.player.currentHP -= Math.floor(this.currentAtk * (1-this.player.def));
+        }
+        this.player.isAttacked = true;
+        this.isTouchingPlayer = true;
+    }
+};
