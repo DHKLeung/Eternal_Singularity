@@ -1,7 +1,8 @@
 # Eternal-Singularity
 Object-Oriented Programming Lab project
 
-1.由於資訊過多,所以在右上方新增一個按鈕能夠連結到官方網站,裡面會有詳細的資料
+1.由於資訊過多,所以在遊戲開始畫面或遊戲中的右上方新增一個按鈕(鵝蛋形)能夠連結到我們遊戲的官方網站,裡面會有詳細的資料
+如果無法開啟，請直接打開遊戲資料夾的 Eternal-Singularity/Game_info/MainPage/index.html
 
 2.操作說明於網站中的About Game顯示
 
@@ -16,6 +17,9 @@ Object-Oriented Programming Lab project
 4.地圖架構大致如下:(※1為起始地圖;T為考驗地圖;B為Boss地圖)
 
   3 T
+  
   2 B
+  
   1
+  
 5.技能都有等級限制,詳情請前往網站中的Character-Skill查看
