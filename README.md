@@ -2,6 +2,7 @@
 Object-Oriented Programming Lab project
 
 1.由於資訊過多,所以在遊戲開始畫面或遊戲中的右上方新增一個按鈕(鵝蛋形)能夠連結到我們遊戲的官方網站,裡面會有詳細的資料
+
 如果無法開啟，請直接打開遊戲資料夾的 Eternal-Singularity/Game_info/MainPage/index.html
 
 2.操作說明於網站中的About Game顯示
